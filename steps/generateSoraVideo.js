@@ -3,12 +3,30 @@ import { uploadToGCS } from "../helpers/uploadToGCS.js";
 export async function generateSoraVideo(mood) {
   console.log("Starting Sora Video Generation (Clean Background)...");
 
-  const prompt = `Create a short, vertical video suitable for Instagram Reels.
-9:16 Aspect Ratio.
-High resolution, cinematic lighting.
-No identifiable faces or characters.
+  const prompt = `
+  Create a short, vertical video suitable for Instagram Reels.
+9:16 aspect ratio.
+High resolution.
+Soft, natural lighting.
+Minimalist, calm visual tone.
+
+No identifiable faces or people.
 No text, no captions, no overlays.
-The background must be clean and uncluttered to allow for text overlay later.
+No dramatic motion.
+No fast cuts.
+No visual clutter.
+
+The background should feel:
+- Quiet
+- Ordered
+- Spacious
+- Unrushed
+- Neutral
+
+Visual style:
+A clean, everyday workspace or environment that suggests focus and simplicity.
+Subtle movement only (gentle light shift, slow shadow movement, minimal ambient motion).
+Nothing visually demanding.
 
 Visual Description:
 ${mood}
